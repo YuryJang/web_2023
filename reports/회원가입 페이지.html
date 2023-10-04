@@ -2,9 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>회원가입 페이지</title>
 </head>
 <body>
+<br>
+<br>
+<h1>취업 정보 계정 만들기</h1>
+* 필수 입력 항목
+<br>
+<br>
+기본 정보
+<br>
+<br>
+
+<form>
+<label>이 름*</label>
+<input type="text" size="8">
+<br>
+<label>이메일*</label>
+<input type="email" size="15" placeholder="id@domain_name"
+       style="display:inline-block; height:15px;">
+<br>
+<label>암호*</label>
+<input type="password" size="12">
+<br>
+<label>암호 확인*</label>
+<input type="password" size="12">
+<br>
+<label>모바일 폰*</label>
+<input type="tel" size="13" placeholder="010-0000-0000">
+<br>
+<label>개인 홈페이지</label>
+<input type="url" size="30" placeholder="http://">
+<br>
+<label>주소*</label>
+<input type="text,tel" size="30">
+<br>
+<br>
+학력
+<br>
+<br>
+<label>학교 명*</label>
+<input type="text" size="12">
+<br>
+<label>전 공*</label>
+<input type="text" size="12">
+<br>
+<label>졸업 여부*</label>
+<select name="졸업 여부">
+<option value="1">---선택---</option>
+<option value="2">졸업예정</option>
+<option value="3">졸업</option>
+</select>
+<br>
+<label>졸업(예정)일</label>
+<input type="date">
+<br>
+<br>
+<label>업무경력</label>
+<br>
+<br>
+<label>근무업체명</label>
+<input type="text" size="20">
+<br>
+<label>직 위</label>
+<input type="text">
+<br>
+<label>담당 업무</label>
+<textarea cols="80" rows="10">이전 업체에서 담당한 업무를 기술하시오.</textarea>
+<br>
+<label>근무년수</label>
+<input type="number" min="0" max="10" step="0.5">년
+<br>
+<br>
+자기소개서
+<br>
+<br>
+<label>첨부 파일</label>
+<input type="file">
+<br>
+<p>
+<input type="submit" value="제 출">
+<input type="reset" value="재작성">
+</p>
+</form>
 
 </body>
 </html>
