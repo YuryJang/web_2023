@@ -79,27 +79,76 @@
 </div>
 
 
-<div class"mt-5 mb-3 p-2 text-bg-success">학 력</div>
-
-
-
-
+<div class="mt-5 mb-3 p-2 text-bg-success">학 력</div>
+    <div class="row">
+<div class="col-sm-6">
+    <div class="my-3 me-3">
+    <label="school" class="form-label">학교명
+    <span class="text-danger">*</span></label>
+    <input type="text" id="major" name="major" class="form-control"
 </div>
 
 
-</label>
+<div class="col-sm-6">
+    <div class="mb-2 me-3">
+    <label="major" class="form-label">"전 공"
+    <span class="text-danger">*</span></label>
+    <input type="text" id="major" name="major" class="form-control"
+</div>
+</div>
 
+<div class="col-sm-6">
+    <div class="my-3 me-3">
+        <label="g_status" class="form-label">"졸업 여부"</label>
+        <span class="text-danger">*</span>
+    </label>
+    <select name="status" id="g_status" class="form-select">
+     <option value="0">---선택---</option>
+     <option value="1">---선택---</option>
+     <option value="2">---선택---</option>
+    </select>
+    </div>
 
+    <div class="mb-3 me-3">
+    <label="g_year" class="form-label">졸업(예정)년도
+    <span class="text-danger">*</span>
+    </label>
+    <input type="date" id="s_year" name="s_year" class="form-control">
+    </div>
+</div>
 
+    <div class="mt-5 mb-3 p-2 text-bg-secondary">업무 경력</div>
+    <div class="my-3">
+    <div class="my-3 me-5 d-sm-inline">최종 직위 </div>
+    <div class="form-check form-check-inline">
+      <input type="radio" class="form-check-input" name="position" id="emp1" checked="">
+      <label for="emp1" class="form-check-label">사원급</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="radio" name="position" id="emp2" class="form-check-input">
+      <label for="emp2" class="form-check-label">대리 ~ 과장</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="radio" name="position" id="emp3" class="form-check-input">
+      <label for="emp3" class="form-check-label">차장급 이상</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="radio" name="position" id="emp4" class="form-check-input">
+      <label for="emp4" class="form-check-label">임원급</label>
+    </div>
+  </div>
 
+<div class="mb-3">
+    <label for="duty" class="my-3 form-label">주요 담당 업무</label>
+    <textarea rows="10" class="form-control" id="duty" name="duty">담당했던 주요 업무를 기술하시오.</textarea>
+  </div>
 
+<div class="my-5 text-center">
+    <input type="submit" class="btn btn-outline-primary" value="제 출">
+    <input type="reset" class="btn btn-outline-primary" value="재작성"></div>
 
+</div>
 </form>
-
-
-
-
-
 </div>
 
 </body>
