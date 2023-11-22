@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선택자 활용-예제</title>
+<style>
+ a:link, a:visited {text-decoration: none;}
+ a:hover {background-color: #9ec5fe;
+ font-weight: bold}
+ h3::first-letter {color:brown;
+ font-size: x-large}
+ .heading {font-size: 18px;
+ font-weight: bold;}
+ #warnings {
+ padding: 20px;
+ padding-bottom: 0px;
+ font-size: 18px;}
+ #w_cnts {
+     font-size: 15px;
+     color: brown;}
+</style>
+
+</head>
+<body>
+<div>
+<h3 class="heading">Web Programming</h3>
+
+<div>
+<p class="heading">주요 학습 내용</p>
+<ul>
+<li><a href="https://youtu.be/0aBDoxV2YVw?si=F1rI8g7WpUZDY78B">HTML</a></li>
+<li><a href="https://youtu.be/0aBDoxV2YVw?si=F1rI8g7WpUZDY78B">CSS3</a></li>
+<li><a href="https://youtu.be/0aBDoxV2YVw?si=F1rI8g7WpUZDY78B">Javascript</a></li>
+<li><a href="https://youtu.be/0aBDoxV2YVw?si=F1rI8g7WpUZDY78B">Bootstrap</a></li></ul>
+</div>
+
+<div id="warnings">
+<p class="heading" style= "color: red">주의 사항</p>
+<ul id="w_cnts">
+    <li>마감기한이 지나면 과제 제출이 자동으로 차단됩니다.</li>
+    <li>1/4이상 결석하는 경우 자동 F입니다.</li> </ul>
+</div>
+</body>
+</html>
