@@ -12,44 +12,27 @@
 
 </head>
 <body>
-<h1 id="title">2진수 변환기</h1>
-<p>
-    <a style="color: dodgerblue"> 2 진수 : </a>
-<input type="text" id="bin" size="20">
-<button type="button" class="btn btn-dark" onclick="bin()">===></button>
-</p>
-
-<p>
-<script src="js/script.js"></script>
-    <a style="color: dodgerblue"> 16 진수 </a><input type="text" id="hex">
-</p>
-
-<header></header>
-
-<div class="case2">
-<h1>파스칼 삼각형</h1>
-    <a style="color: dodgerblue"> 삼각형 높이 </a>
-<input type="number" id="number" style="color: dodgerblue">
-<p><button type="button" class="btn btn-success">그리기</button></p>
-</div>
+<table>
+	<tr>
+	<th>2진수</th>
+	<td><input type="text" id="bin" size="10" value="">
+	<button type="button" onclick="bin()">===></button></td>
+	</tr>
+	<tr>
+	<th>16진수</th>
+	<td><input type="text" id="hex" size="10" value="">
+	</tr>
+</table>
 
 <script type="text/javascript">
 
+    function two() {
 
-    function bin() {
-
-       let bin = parseInt(document.getElementById('bin').value,2);
 		// 2->16
 		let bin16 = bin.toString(16);
 		document.getElementById('hex').value = bin16;
-
     }
 
-	function hex() {
-		// 16->2
-		let hex2 =hex.toString(2);
-		document.getElementById('bin').value = hex2;
-		}
 
 </script>
 
