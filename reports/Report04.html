@@ -28,11 +28,15 @@
 
 <div class="case2">
 <h1>파스칼 삼각형</h1>
-    <a style="color: dodgerblue"> 삼각형 높이 </a>
-<input type="number" id="number" style="color: dodgerblue">
-<p><button type="button" class="btn btn-success">그리기</button></p>
+ <div class="mb-3">
+     <label class="form-label" text-primary" style="color: dodgerblue">삼각형 높이</label>
+ </div>
+<input type="number" id="number" min="1" max="20" step="1" value="1" style="color: dodgerblue">
+<p></p>
+<p><button type="button" class="btn btn-success" onclick="pascals()">그리기</button></p>
 </div>
 
+<div class="text-bg-secondary" id="for_drawing"></div>
 <script type="text/javascript">
 
 
@@ -51,6 +55,36 @@
 		document.getElementById('bin').value = hex2;
 		}
 
+    function pascals() {
+    function new_row(prev_row) {
+        if (prev_row === 0) return [];
+        if (prev_row === 1) return [[1]];
+        var result = [];
+        for (var row = 1; row <= prev_row; row++) {
+            var arr = [];
+            for (var col = 0; col < row; col++) {
+                if (col === 0 || col === row - 1) {
+                    arr.push(1);
+                } else {
+                    arr.push((result[row - 2][col - 1] + result[row - 2][col]));
+                }
+            }
+            result.push(arr);
+        }
+        return result;
+    }
+    var height = document.getElementById('size').value;
+    height = parseInt(height)
+    var triangle = new_row(height);
+    document.getElementById('draw_area').innerHTML = ' ';
+    for (var i = 0; i < triangle.length; i++) {
+        for (var j = 0; j < triangle[i].length; j++) {
+            text = triangle[i][j];
+            document.getElementById('draw_area').innerHTML += triangle[i][j] + ' '; /*추가로 담기*/
+        }
+        document.getElementById('draw_area').innerHTML += ('<br>')
+    }
+}
 </script>
 
 </body>
