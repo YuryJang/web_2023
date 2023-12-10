@@ -19,17 +19,18 @@ document.getElementById("name").innerHTML = number;
 </head>
 <body>
 <h1 id="title">2진수 변환기</h1>
-<div class="name">
+<p>
 2 진수 :
-<input type="text" id="name" size="30" style="color: dodgerblue">
-<button type="button" class="btn btn-dark" onclick="transform()">===></button>
+<input type="text" id="bin" size="20" style="color: dodgerblue">
+<button type="button" class="btn btn-dark" onclick="two()">===></button>
 </p>
-<div id="content"></div>
-<script src="js/script.js"></script>
-16 진수 <input type="text" id="name" style="color: dodgerblue">
-</div>
 
-<divider></divider>
+<p>
+<script src="js/script.js"></script>
+16 진수 <input type="text" id="hex" style="color: dodgerblue">
+</p>
+
+<header></header>
 
 <div class="case2">
 <h1>파스칼 삼각형</h1>
@@ -38,6 +39,17 @@ document.getElementById("name").innerHTML = number;
 <p><button type="button" class="btn btn-success">그리기</button></p>
 </div>
 
+<script type="text/javascript">
+
+    function two() {
+
+		// 2->16
+		let bin16 = bin.toString(16);
+		document.getElementById('hex').value = bin16;
+    }
+
+
+</script>
 
 </body>
 

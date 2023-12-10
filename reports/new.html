@@ -1,16 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
+<table>
+	<tr>
+	<th>10진수</th>
+	<td><input type="text" id="num" size="10" value="">
+	<button type="button" onclick="num()">변환</button></td>
+	</tr>
+	<tr>
+	<th>2진수</th>
+	<td><input type="text" id="bin" size="10" value="">
+	<button type="button" onclick="bin()">변환</button></td>
+	</tr>
+	<tr>
+	<th>8진수</th>
+	<td><input type="text" id="oct" size="10" value="">
+	<button type="button" onclick="oct()">변환</button></td>
+	</tr>
+	<tr>
+	<th>16진수</th>
+	<td><input type="text" id="hex" size="10" value="">
+	<button type="button" onclick="hex()">변환</button></td>
+	</tr>
+</table>
 
-<script type="module">
-  import { Toast } from 'bootstrap.esm.min.js'
+<script type="text/javascript">
 
-  Array.from(document.querySelectorAll('.toast'))
-    .forEach(toastNode => new Toast(toastNode))
+	function num() {
+		let num = parseInt(document.getElementById('num').value);
+
+		let num2 = num.toString(2);
+		document.getElementById('bin').value = num2;
+		let num8 = num.toString(8);
+		document.getElementById('oct').value = num8;
+		let num16 = num.toString(16);
+		document.getElementById('hex').value = num16;
+	}
+
+	function bin() {
+		let bin = parseInt(document.getElementById('bin').value,2);
+		// 2->10
+		document.getElementById('num').value = bin;
+		// 2->8
+		let bin8 = bin.toString(8);
+		document.getElementById('oct').value = bin8;
+		// 2->16
+		let bin16 = bin.toString(16);
+		document.getElementById('hex').value = bin16;
+	}
+
+	function oct() {
+		let oct = parseInt(document.getElementById('oct').value,8);
+		// 8->10
+		document.getElementById('num').value = oct;
+		// 8->2
+		let oct2 = oct.toString(2);
+		document.getElementById('bin').value = oct2;
+		// 8->16
+		let oct16 = oct.toString(16);
+		document.getElementById('hex').value = oct16;
+	}
+
+	function hex() {
+		let hex = parseInt(document.getElementById('hex').value,16);
+		// 16->10
+		document.getElementById('num').value = hex;
+		// 16->2
+		let hex2 =hex.toString(2);
+		document.getElementById('bin').value = hex2;
+		// 16->8
+		let hex8 = hex.toString(8);
+		document.getElementById('oct').value = hex8;
+	}
 </script>
 
 </body>
